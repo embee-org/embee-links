@@ -12,6 +12,7 @@ const { title } = Astro.props;
 
 <html lang="es">
   <head>
+    <base href="/embee-links/" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -41,6 +42,11 @@ const { title } = Astro.props;
       id="theme-stylesheet"
       rel="stylesheet"
       href="/embee-links/styles/light-color.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="/embee-links/favicon.ico"
+      type="image/x-icon"
     />
   </head>
   <body>
