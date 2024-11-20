@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  name: string;
+  url: string;
+  lettersUrl: string;
+  color: string;
+  embee: {
+    url: string;
+    width: number;
+    height: number;
+    bottom: string;
+    left: string;
+    transform: string;
+  };
+}
+
+const { url, lettersUrl, name, color, embee } = Astro.props;
+---
+
+<a href={url} target="_blank" style={`background: ${color}`}>
+  <Image
+    class="img-letters"
+    src={`/embee-links/${lettersUrl}`}
+    width={260}
+    height={104}
+    alt={`Letras ${name}`}
+  />
+  <Image
+    class="embee-avatar"
+    src={`/embee-links/${embee.url}`}
+    alt={`Embeejayz ${name}`}
+    height={embee.height}
+    width={embee.width}
+    style={`bottom: ${embee.bottom}; left: ${embee.left}; transform: ${embee.transform}`}
+  />
+</a>
+
+<style>
+  a {
+    box-shadow:
+      rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    align-items: center;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
+    font-weight: 900;
+    font-size: 26px;
+    height: 90px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 550px;
+    max-width: 80dvw;
+  }
+
+  .embee-avatar {
+    position: absolute;
+  }
+  .img-letters {
+    margin-left: 24px;
+  }
+</style>
