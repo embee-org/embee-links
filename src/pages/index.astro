@@ -3,7 +3,6 @@ import { AvatarUser } from "@components/avatar-user";
 import { EmbeeBanner } from "@components/embee-banner";
 import { FloatIcon } from "@components/float-icon";
 import { LinkDetail } from "@components/link-detail";
-import { SelectTheme } from "@components/select-theme";
 import { SponsorDetail } from "@components/sponsor-detail";
 import { BaseLayout } from "@layouts/base-layout";
 import { getSponsors } from "@services/getSponsors";
@@ -14,7 +13,6 @@ const sponsors = getSponsors();
 
 <BaseLayout title="Embeejayz">
   <main>
-    <div class="select-theme-container"><SelectTheme /></div>
     <div class="avatar-container">
       <FloatIcon
         url="/logos/skt-t1.png"
@@ -190,13 +188,6 @@ const sponsors = getSponsors();
     display: flex;
     flex-direction: column;
     padding: 25px;
-    width: 100%;
-  }
-  .select-theme-container {
-    align-items: center;
-    display: flex;
-    justify-content: flex-end;
-    padding-inline: 55px;
     width: 100%;
   }
   .avatar-container {
