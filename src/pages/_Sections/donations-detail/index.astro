@@ -2,6 +2,7 @@
 import { EmbeeBanner } from "@components/embee-banner";
 import { LinkDetail } from "@components/link-detail";
 import { SectionPage } from "@components/section-page";
+import { Image } from "astro:assets";
 ---
 
 <SectionPage styleInline="gap: 40px">
@@ -10,16 +11,16 @@ import { SectionPage } from "@components/section-page";
     url="https://streamlabs.com/embeejayz/tip"
     lettersUrl="letters/donations.png"
     name="donations"
-    embee={{
-      url: "images/embee-money.png",
-      height: 180,
-      width: 180,
-      bottom: "0",
-      left: "0",
-      transform: "translate(-45px, 0)",
-    }}
     color="linear-gradient(-180deg, #04c589, #00805d 40%, #00654b 90%)"
-  />
+  >
+    <Image
+      class="embee-img"
+      src="/images/embee-money.png"
+      alt="Embee Money"
+      height={180}
+      width={180}
+    />
+  </EmbeeBanner>
   <LinkDetail
     icon={"patreon.svg"}
     name={"Patreon"}
@@ -32,5 +33,12 @@ import { SectionPage } from "@components/section-page";
 <style>
   h2 {
     margin-bottom: 65px;
+  }
+
+  .embee-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-45px, 0);
   }
 </style>

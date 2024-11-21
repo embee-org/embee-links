@@ -6,17 +6,9 @@ interface Props {
   url: string;
   lettersUrl: string;
   color: string;
-  embee: {
-    url: string;
-    width: number;
-    height: number;
-    bottom: string;
-    left: string;
-    transform: string;
-  };
 }
 
-const { url, lettersUrl, name, color, embee } = Astro.props;
+const { url, lettersUrl, name, color } = Astro.props;
 ---
 
 <a href={url} target="_blank" style={`background: ${color}`}>
@@ -27,14 +19,7 @@ const { url, lettersUrl, name, color, embee } = Astro.props;
     height={104}
     alt={`Letras ${name}`}
   />
-  <Image
-    class="embee-avatar"
-    src={`/${embee.url}`}
-    alt={`Embeejayz ${name}`}
-    height={embee.height}
-    width={embee.width}
-    style={`bottom: ${embee.bottom}; left: ${embee.left}; transform: ${embee.transform}`}
-  />
+  <slot />
 </a>
 
 <style>
@@ -55,9 +40,6 @@ const { url, lettersUrl, name, color, embee } = Astro.props;
     max-width: 80dvw;
   }
 
-  .embee-avatar {
-    position: absolute;
-  }
   .img-letters {
     margin-left: 24px;
   }
