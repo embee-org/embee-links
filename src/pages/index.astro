@@ -1,135 +1,20 @@
 ---
-import { AvatarUser } from "@components/avatar-user";
 import { EmbeeBanner } from "@components/embee-banner";
-import { FloatIcon } from "@components/float-icon";
 import { LinkDetail } from "@components/link-detail";
 import { SponsorDetail } from "@components/sponsor-detail";
 import { BaseLayout } from "@layouts/base-layout";
 import { getSponsors } from "@services/getSponsors";
 import { Image } from "astro:assets";
+import { EmbeeDetail } from "./_Sections/embee-detail";
+import { SocialNetworks } from "./_Sections/social-networks";
 
 const sponsors = getSponsors();
 ---
 
 <BaseLayout title="Embeejayz">
   <main>
-    <div class="avatar-container">
-      <FloatIcon
-        url="/logos/skt-t1.png"
-        left="80px"
-        top="35px"
-        width={95}
-        height={60}
-        color="var(--primary)"
-      />
-      <FloatIcon
-        url="/images/star.png"
-        left="80px"
-        top="120px"
-        width={15}
-        height={15}
-        color="#FEB424ff"
-      />
-      <FloatIcon
-        url="/images/star.png"
-        left="115px"
-        top="120px"
-        width={15}
-        height={15}
-        color="#FEB424ff"
-      />
-      <FloatIcon
-        url="/images/star.png"
-        left="150px"
-        top="120px"
-        width={15}
-        height={15}
-        color="#FEB424ff"
-      />
-      <AvatarUser />
-      <FloatIcon
-        color="var(--primary)"
-        url="/logos/t1.png"
-        right="80px"
-        top="35px"
-        width={95}
-        height={60}
-      />
-      <FloatIcon
-        url="/images/star.png"
-        right="130px"
-        top="120px"
-        width={15}
-        height={15}
-        color="#FEB424ff"
-      />
-      <FloatIcon
-        url="/images/star.png"
-        right="100px"
-        top="120px"
-        width={15}
-        height={15}
-        color="#FEB424ff"
-      />
-    </div>
-    <section class="social-network-container" style="margin-top: 45px;">
-      <EmbeeBanner
-        url="https://discord.gg/c4CzFbaEtH"
-        lettersUrl="letters/discord.png"
-        name="discord"
-        embee={{
-          url: "images/embee-discord.png",
-          height: 180,
-          width: 180,
-          bottom: "0",
-          left: "0",
-          transform: "translate(-40px, 18px)",
-        }}
-        color="linear-gradient(#2eabff, #1b8ff9 40%, #145eb9 90%)"
-      />
-      <EmbeeBanner
-        url="https://www.youtube.com/@embeejay69"
-        lettersUrl="letters/youtube.png"
-        name="youtube"
-        embee={{
-          url: "images/embee-computer.png",
-          height: 170,
-          width: 170,
-          bottom: "0",
-          left: "0",
-          transform: "translate(-40px, 20px)",
-        }}
-        color="linear-gradient(-180deg, #f71c0b, #D31405ff 60%, #ac1408 90%)"
-      />
-      <EmbeeBanner
-        url="https://www.instagram.com/embeejayz/_"
-        lettersUrl="letters/instagram.png"
-        name="instagram"
-        embee={{
-          url: "images/embee-facha.png",
-          height: 170,
-          width: 170,
-          bottom: "0",
-          left: "0",
-          transform: "translate(-55px, 0)",
-        }}
-        color="linear-gradient(30deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)"
-      />
-      <EmbeeBanner
-        url="https://twitter.com/EmBeeJay_"
-        lettersUrl="letters/twitter.png"
-        name="twitter"
-        embee={{
-          url: "images/embee-x.png",
-          height: 180,
-          width: 180,
-          bottom: "0",
-          left: "0",
-          transform: "translate(-55px, 0)",
-        }}
-        color="linear-gradient(#454545, #3d3d3d 40%, #000000 90%)"
-      />
-    </section>
+    <EmbeeDetail />
+    <SocialNetworks />
     <section class="sponsor-container">
       <h2>
         Este proyecto es posible gracias a ustedes y a nuestros patrocinadores:
@@ -188,13 +73,6 @@ const sponsors = getSponsors();
     display: flex;
     flex-direction: column;
     padding: 25px;
-    width: 100%;
-  }
-  .avatar-container {
-    position: relative;
-    align-items: center;
-    display: flex;
-    justify-content: center;
     width: 100%;
   }
   section {
