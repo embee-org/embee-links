@@ -1,12 +1,12 @@
 ---
 import { EmbeeBanner } from "@components/embee-banner";
 import { LinkDetail } from "@components/link-detail";
-import { SponsorDetail } from "@components/sponsor-detail";
 import { BaseLayout } from "@layouts/base-layout";
 import { getSponsors } from "@services/getSponsors";
 import { Image } from "astro:assets";
 import { EmbeeDetail } from "./_Sections/embee-detail";
 import { SocialNetworks } from "./_Sections/social-networks";
+import { SponsorsDetail } from "./_Sections/sponsors-detail";
 
 const sponsors = getSponsors();
 ---
@@ -15,23 +15,7 @@ const sponsors = getSponsors();
   <main>
     <EmbeeDetail />
     <SocialNetworks />
-    <section class="sponsor-container">
-      <h2>
-        Este proyecto es posible gracias a ustedes y a nuestros patrocinadores:
-      </h2>
-      <div class="sponsors">
-        {
-          sponsors.map((sponsor) => (
-            <SponsorDetail
-              name={sponsor.name}
-              url={sponsor.url}
-              image={sponsor.logo}
-              patreon={sponsor.patreon}
-            />
-          ))
-        }
-      </div>
-    </section>
+    <SponsorsDetail />
     <section>
       <h2>Continua apoyandonos para seguir creciendo juntos 🚀</h2>
       <LinkDetail
@@ -84,17 +68,6 @@ const sponsors = getSponsors();
     width: 100%;
   }
 
-  .sponsor-container h2 {
-    font-size: 24px;
-  }
-  .sponsors {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 800px;
-    max-width: 80dvw;
-  }
   .embee-donations {
     background-image: url("/banners/donaciones.png");
     background-size: cover;

@@ -1,0 +1,47 @@
+---
+import { SponsorDetail } from "@components/sponsor-detail";
+import { getSponsors } from "@services/getSponsors";
+
+const sponsors = getSponsors();
+---
+
+<section class="sponsor-container">
+  <h2>
+    Este proyecto es posible gracias a ustedes y a nuestros patrocinadores:
+  </h2>
+  <div class="sponsors">
+    {
+      sponsors.map((sponsor) => (
+        <SponsorDetail
+          name={sponsor.name}
+          url={sponsor.url}
+          image={sponsor.logo}
+          patreon={sponsor.patreon}
+        />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 25px;
+    width: 100%;
+  }
+
+  .sponsor-container h2 {
+    font-size: 24px;
+  }
+  .sponsors {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 800px;
+    max-width: 80dvw;
+  }
+</style>
