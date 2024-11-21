@@ -12,7 +12,6 @@ const { title } = Astro.props;
 
 <html lang="es">
   <head>
-    <base href="/embee-links/" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -26,28 +25,21 @@ const { title } = Astro.props;
       content="embeejayz, twitch, twitter, patreon, t1, skt, skt t1, faker, league of legends, lol"
     />
     <meta name="author" content="Gountzjs" />
-    <meta
-      property="og:image"
-      content="https://embee-links-9ef350.gitlab.io/avatar-embee.jpg"
-    />
+    <meta property="og:image" content="/avatar-embee.jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Embeejayz redes sociales" />
     <meta
       property="og:description"
       content="Embeejayz información de redes sociales y contenido"
     />
-    <meta property="og:url" content="https://embee-links-9ef350.gitlab.io/" />
+    <meta property="og:url" content="/" />
     <meta property="og:site_name" content="Embeejayz" />
     <link
       id="theme-stylesheet"
       rel="stylesheet"
-      href="/embee-links/styles/light-color.css"
+      href="/styles/light-color.css"
     />
-    <link
-      rel="shortcut icon"
-      href="/embee-links/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <slot />

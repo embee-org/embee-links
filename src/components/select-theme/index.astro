@@ -117,7 +117,7 @@ import { SystemIcon, SunIcon, MoonIcon } from "@components/svgs";
     detailTheme.innerHTML = "";
     detailTheme.appendChild(btnDark.firstElementChild.cloneNode(true));
     detailTheme.appendChild(document.createTextNode(THEME_SELECTED));
-    linkTheme.href = "/embee-links/styles/dark-color.css";
+    linkTheme.href = "/styles/dark-color.css";
     localStorage.setItem("theme", "dark");
   };
 
@@ -126,7 +126,7 @@ import { SystemIcon, SunIcon, MoonIcon } from "@components/svgs";
     detailTheme.innerHTML = "";
     detailTheme.appendChild(btnLight.firstElementChild.cloneNode(true));
     detailTheme.appendChild(document.createTextNode(THEME_SELECTED));
-    linkTheme.href = "/embee-links/styles/light-color.css";
+    linkTheme.href = "/styles/light-color.css";
     localStorage.setItem("theme", "light");
   };
 
@@ -136,8 +136,8 @@ import { SystemIcon, SunIcon, MoonIcon } from "@components/svgs";
     detailTheme.appendChild(btnSystem.firstElementChild.cloneNode(true));
     detailTheme.appendChild(document.createTextNode(THEME_SELECTED));
     linkTheme.href = isDarkMode
-      ? "/embee-links/styles/dark-color.css"
-      : "/embee-links/styles/light-color.css";
+      ? "/styles/dark-color.css"
+      : "/styles/light-color.css";
     localStorage.removeItem("theme");
   };
 

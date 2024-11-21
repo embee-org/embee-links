@@ -22,14 +22,14 @@ const { url, lettersUrl, name, color, embee } = Astro.props;
 <a href={url} target="_blank" style={`background: ${color}`}>
   <Image
     class="img-letters"
-    src={`/embee-links/${lettersUrl}`}
+    src={`/${lettersUrl}`}
     width={260}
     height={104}
     alt={`Letras ${name}`}
   />
   <Image
     class="embee-avatar"
-    src={`/embee-links/${embee.url}`}
+    src={`/${embee.url}`}
     alt={`Embeejayz ${name}`}
     height={embee.height}
     width={embee.width}
