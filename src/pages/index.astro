@@ -1,13 +1,10 @@
 ---
 import { BaseLayout } from "@layouts/base-layout";
-import { getSponsors } from "@services/getSponsors";
 import { Image } from "astro:assets";
 import { DonationsDetail } from "./_Sections/donations-detail";
 import { EmbeeDetail } from "./_Sections/embee-detail";
 import { SocialNetworks } from "./_Sections/social-networks";
 import { SponsorsDetail } from "./_Sections/sponsors-detail";
-
-const sponsors = getSponsors();
 ---
 
 <BaseLayout title="Embeejayz">
@@ -32,6 +29,7 @@ const sponsors = getSponsors();
     display: flex;
     flex-direction: column;
     padding: 25px;
+    gap: 45px;
     width: 100%;
   }
   .shaco-dance {

@@ -1,8 +1,9 @@
 ---
 import { EmbeeBanner } from "@components/embee-banner";
+import { SectionPage } from "@components/section-page";
 ---
 
-<section>
+<SectionPage styleInline="gap: 80px">
   <EmbeeBanner
     url="https://discord.gg/c4CzFbaEtH"
     lettersUrl="letters/discord.png"
@@ -59,16 +60,4 @@ import { EmbeeBanner } from "@components/embee-banner";
     }}
     color="linear-gradient(#454545, #3d3d3d 40%, #000000 90%)"
   />
-</section>
-
-<style>
-  section {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-    gap: 100px;
-    width: 100%;
-    margin-top: 45px;
-  }
-</style>
+</SectionPage>

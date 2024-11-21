@@ -1,11 +1,12 @@
 ---
+import { SectionPage } from "@components/section-page";
 import { SponsorDetail } from "@components/sponsor-detail";
 import { getSponsors } from "@services/getSponsors";
 
 const sponsors = getSponsors();
 ---
 
-<section class="sponsor-container">
+<SectionPage styleInline="gap: 25px">
   <h2>
     Este proyecto es posible gracias a ustedes y a nuestros patrocinadores:
   </h2>
@@ -21,19 +22,10 @@ const sponsors = getSponsors();
       ))
     }
   </div>
-</section>
+</SectionPage>
 
 <style>
-  section {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-    gap: 25px;
-    width: 100%;
-  }
-
-  .sponsor-container h2 {
+  h2 {
     font-size: 24px;
   }
   .sponsors {
