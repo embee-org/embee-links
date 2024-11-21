@@ -1,0 +1,41 @@
+---
+import { EmbeeBanner } from "@components/embee-banner";
+import { LinkDetail } from "@components/link-detail";
+---
+
+<section>
+  <h2>Continua apoyandonos para seguir creciendo juntos 🚀</h2>
+  <LinkDetail
+    icon={"patreon.svg"}
+    name={"Patreon"}
+    url="https://www.patreon.com/embeejayz"
+    color="#000"
+    negativeColor="#fff"
+  />
+  <div style="margin-bottom: 25px;"></div>
+  <EmbeeBanner
+    url="https://streamlabs.com/embeejayz/tip"
+    lettersUrl="letters/donations.png"
+    name="donations"
+    embee={{
+      url: "images/embee-money.png",
+      height: 180,
+      width: 180,
+      bottom: "0",
+      left: "0",
+      transform: "translate(-45px, 0)",
+    }}
+    color="linear-gradient(-180deg, #04c589, #00805d 40%, #00654b 90%)"
+  />
+</section>
+
+<style>
+  section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 25px;
+    width: 100%;
+  }
+</style>
