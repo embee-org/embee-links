@@ -16,7 +16,12 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <link rel="preload" as="track" href="/mp3/alistar-vaquita.mp3" />
+    <link
+      rel="preload"
+      type="audio/mpeg"
+      as="audio"
+      href="/mp3/alistar-vaquita.mp3"
+    />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <meta
       name="description"
