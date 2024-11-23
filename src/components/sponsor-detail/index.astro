@@ -3,10 +3,9 @@ interface Props {
   name: string;
   url: string;
   image: string;
-  patreon?: boolean;
 }
 
-const { name, url, image, patreon } = Astro.props;
+const { url, image } = Astro.props;
 ---
 
 <a
@@ -14,7 +13,6 @@ const { name, url, image, patreon } = Astro.props;
   target="_blank"
   style={`background-image: url('/sponsors/${image}')`}
 >
-  {patreon ? <p>{name}</p> : ""}
 </a>
 
 <style>
