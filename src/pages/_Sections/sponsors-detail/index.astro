@@ -1,9 +1,12 @@
 ---
+import { PatreonerDetail } from "@components/patreoner-detail";
 import { SectionPage } from "@components/section-page";
 import { SponsorDetail } from "@components/sponsor-detail";
+import { getPatreons } from "@services/getPatreons";
 import { getSponsors } from "@services/getSponsors";
 
 const sponsors = getSponsors();
+const patreons = getPatreons();
 ---
 
 <SectionPage styleInline="gap: 25px">
@@ -17,8 +20,12 @@ const sponsors = getSponsors();
           name={sponsor.name}
           url={sponsor.url}
           image={sponsor.logo}
-          patreon={sponsor.patreon}
         />
+      ))
+    }
+    {
+      patreons.map((patreon) => (
+        <PatreonerDetail name={patreon.name} url={patreon.url} />
       ))
     }
   </div>
