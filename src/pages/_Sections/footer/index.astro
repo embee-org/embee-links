@@ -3,14 +3,12 @@ import { Image } from "astro:assets";
 ---
 
 <footer>
-  <a href="https://github.com/GountzJs" target="_blank">
-    Hecho con <Image
-      src="/images/ahri.png"
-      width={55}
-      height={55.5}
-      alt="Corazón ahri"
-    /> por Gountzjs
-  </a>
+  <p>Hecho con</p>
+  <Image src="/images/ahri.png" width={55} height={55.5} alt="Corazón ahri" />
+  <p>por</p>
+  <a href="https://github.com/GountzJs" target="_blank">Gountzjs</a>
+  <p>y</p>
+  <a href="https://www.instagram.com/su1zide/" target="_blank"> Suicide </a>
 </footer>
 
 <style>
@@ -20,7 +18,8 @@ import { Image } from "astro:assets";
     display: flex;
     justify-content: center;
     padding: 20px 15px;
-    width: 100%;
+    gap: 5px;
+    width: 100dvw;
   }
   a {
     text-decoration: none;
