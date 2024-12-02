@@ -1,11 +1,10 @@
 ---
 import { EmbeeBanner } from "@components/embee-banner";
-import { LinkDetail } from "@components/link-detail";
 import { SectionPage } from "@components/section-page";
 import { Image } from "astro:assets";
 ---
 
-<SectionPage styleInline="gap: 40px">
+<SectionPage styleInline="gap: 100px">
   <h2>Continua apoyandonos para seguir creciendo juntos 🚀</h2>
   <EmbeeBanner
     url="https://streamlabs.com/embeejayz/tip"
@@ -21,19 +20,25 @@ import { Image } from "astro:assets";
       width={180}
     />
   </EmbeeBanner>
-  <LinkDetail
-    icon={"patreon.svg"}
-    name={"Patreon"}
+  <EmbeeBanner
     url="https://www.patreon.com/embeejayz"
-    color="#000"
-    negativeColor="#fff"
-  />
+    lettersUrl="letters/patreon.png"
+    name="patreon"
+    color="linear-gradient(-180deg, #ff6854, #e5341d 90%)"
+  >
+    <Image
+      class="embee-patreon"
+      src="/images/embee-sub.png"
+      alt="Embee Patreon"
+      height={180}
+      width={180}
+    />
+  </EmbeeBanner>
 </SectionPage>
 
 <style>
   h2 {
     font-size: 24px;
-    margin-bottom: 65px;
   }
 
   .embee-img {
@@ -41,6 +46,13 @@ import { Image } from "astro:assets";
     bottom: 0;
     left: 0;
     transform: translate(-45px, 0);
+  }
+
+  .embee-patreon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-55px, 0);
   }
 
   @media (max-width: 500px) {
