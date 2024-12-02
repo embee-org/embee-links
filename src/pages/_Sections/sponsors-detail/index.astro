@@ -1,7 +1,6 @@
 ---
 import { PatreonerDetail } from "@components/patreoner-detail";
 import { SectionPage } from "@components/section-page";
-import { SponsorDetail } from "@components/sponsor-detail";
 import { getPatreons } from "@services/getPatreons";
 import { getSponsors } from "@services/getSponsors";
 
@@ -14,7 +13,7 @@ const patreons = getPatreons();
     Este proyecto es posible gracias a ustedes y a nuestros patrocinadores:
   </h2>
   <div class="sponsors">
-    {
+    <!-- {
       sponsors.map((sponsor) => (
         <SponsorDetail
           name={sponsor.name}
@@ -22,7 +21,7 @@ const patreons = getPatreons();
           image={sponsor.logo}
         />
       ))
-    }
+    } -->
     {
       patreons.map((patreon) => (
         <PatreonerDetail name={patreon.name} url={patreon.url} />
