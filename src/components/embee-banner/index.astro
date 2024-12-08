@@ -14,7 +14,7 @@ const { url, lettersUrl, name, color } = Astro.props;
 <a href={url} target="_blank" style={`background: ${color}`}>
   <Image
     class="img-letters"
-    src={`/${lettersUrl}`}
+    src={lettersUrl}
     width={260}
     height={104}
     alt={`Letras ${name}`}
